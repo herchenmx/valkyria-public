@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Resource-shrinker keep list (isShrinkResources = true).
+
+  The 606 `liftoff_ex_*` M&M exercise illustrations are referenced ONLY
+  dynamically, via LiftoffSlug.kt:
+      context.resources.getIdentifier("liftoff_ex_$slug", "drawable", pkg)
+  so the shrinker sees no static R.drawable.* reference and would strip every
+  one of them — blanking the M&M exercise art. Pin the whole family here.
+
+  shrinkMode="strict" so the shrinker removes exactly what is unreferenced-and-
+  not-listed here, instead of falling back to keeping everything the moment it
+  spots an unresolved getIdentifier() call.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/liftoff_ex_*"
+    tools:shrinkMode="strict" />

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Defense-in-depth: pin cleartext (plain HTTP) OFF for the whole app. targetSdk
+  35 already defaults cleartext to disabled, so this is future-proofing — it
+  keeps the guarantee explicit and independent of the target-SDK default, and
+  makes any future dependency's http:// call fail loudly rather than slip
+  through if that default ever changes. Every endpoint the companion talks to
+  (api.hevyapp.com, the Hevy media CDN via Coil, raw.githubusercontent.com) is
+  HTTPS. No <domain-config> overrides, so there is no cleartext escape hatch.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

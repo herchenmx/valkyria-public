@@ -1,0 +1,65 @@
+# Build outputs
+build/
+app/build/
+# Kotlin compiler crash logs -- machine-specific, and they embed absolute
+# local paths (they are how we discovered the repo was blocked under
+# ~/Downloads by macOS privacy protection).
+.kotlin/
+*.apk
+*.aab
+
+# macOS Finder metadata — never commit.
+.DS_Store
+**/.DS_Store
+
+# Local config (contains SDK path, not for sharing)
+local.properties
+
+# IDE
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+
+# API key is hardcoded in HevyApp.kt — private repo, acceptable
+
+# Android Studio generated files
+.descriptions.xml
+
+# Project-specific exclusions
+CONTEXT.md
+hevy api.pdf
+backlog.md
+barbell.png
+code-inspections/
+/screenshot.png
+screenshots/
+secrets.properties
+
+# Local-only scrapers with auth tokens baked in; never commit. Anchored to
+# repo root so `.github/scripts/` (CI helper scripts, no secrets) stays
+# tracked.
+/scripts/
+
+# Scraped catalog + derived spreadsheets; regenerate via scripts/hevy_scrape.py.
+# Anchored to the repo root so it doesn't clobber the /data/ Kotlin package
+# inside companion/src/.../hevycompanion/data/.
+/data/
+
+# Decompiled official Hevy Android APK (apktool output) — reference only, never commit.
+hevy-android-os/
+
+# Local artifacts dir produced by .github/scripts/check-hevy-version.py when run
+# outside GitHub Actions. In CI this lives under runner.temp; only matters for
+# local debugging.
+.hevy-archive/
+
+# Python bytecode produced when validating the scraper locally.
+__pycache__/
+/hevy-wear-os/
+
+# Local audit trail written by the SessionStart/SessionEnd git-sync hooks
+# (settings.json). Never committed — the SessionEnd `git add -A` would otherwise
+# churn it every session.
+/.claude/sync.log

@@ -1,0 +1,65 @@
+{
+  "id": "a1fbe803-74ab-4071-9571-59e27adb43b5",
+  "title": "POP: Lower 2 Part 1 @LF",
+  "routine_id": "1069c2a4-d127-4933-a92b-dbe393c13f19",
+  "start_time": "2026-04-14T16:52:47+00:00",
+  "end_time": "2026-04-14T17:49:58+00:00",
+  "exercises": [
+    {
+      "index": 0, "title": "Squat (Machine)", "exercise_template_id": "CC35A01F",
+      "sets": [
+        {"index": 0, "type": "warmup", "weight_kg": 25, "reps": 10, "distance_meters": null, "duration_seconds": null},
+        {"index": 1, "type": "warmup", "weight_kg": 40, "reps": 5, "distance_meters": null, "duration_seconds": null},
+        {"index": 2, "type": "normal", "weight_kg": 50, "reps": 9, "distance_meters": null, "duration_seconds": null}
+      ]
+    },
+    {
+      "index": 1, "title": "Romanian Deadlift (Barbell)", "exercise_template_id": "2B4B7310",
+      "sets": [
+        {"index": 0, "type": "warmup", "weight_kg": 30, "reps": 10, "distance_meters": null, "duration_seconds": null},
+        {"index": 1, "type": "warmup", "weight_kg": 32.5, "reps": 8, "distance_meters": null, "duration_seconds": null},
+        {"index": 2, "type": "warmup", "weight_kg": 42.5, "reps": 3, "distance_meters": null, "duration_seconds": null},
+        {"index": 3, "type": "normal", "weight_kg": 55, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 4, "type": "normal", "weight_kg": 55, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 5, "type": "normal", "weight_kg": 55, "reps": 15, "distance_meters": null, "duration_seconds": null}
+      ]
+    },
+    {
+      "index": 2, "title": "Leg Press Horizontal (Machine)", "exercise_template_id": "0EB695C9",
+      "sets": [
+        {"index": 0, "type": "warmup", "weight_kg": 36, "reps": 12, "distance_meters": null, "duration_seconds": null},
+        {"index": 1, "type": "warmup", "weight_kg": 54, "reps": 8, "distance_meters": null, "duration_seconds": null},
+        {"index": 2, "type": "warmup", "weight_kg": 73, "reps": 4, "distance_meters": null, "duration_seconds": null},
+        {"index": 3, "type": "warmup", "weight_kg": 91, "reps": 5, "distance_meters": null, "duration_seconds": null},
+        {"index": 4, "type": "normal", "weight_kg": 109, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 5, "type": "normal", "weight_kg": 109, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 6, "type": "normal", "weight_kg": 109, "reps": 15, "distance_meters": null, "duration_seconds": null}
+      ]
+    },
+    {
+      "index": 3, "title": "Single Leg Press (Machine)", "exercise_template_id": "3FD83744",
+      "sets": [
+        {"index": 0, "type": "warmup", "weight_kg": 18, "reps": 10, "distance_meters": null, "duration_seconds": null},
+        {"index": 1, "type": "warmup", "weight_kg": 18, "reps": 10, "distance_meters": null, "duration_seconds": null},
+        {"index": 2, "type": "warmup", "weight_kg": 27, "reps": 5, "distance_meters": null, "duration_seconds": null},
+        {"index": 3, "type": "warmup", "weight_kg": 27, "reps": 5, "distance_meters": null, "duration_seconds": null},
+        {"index": 4, "type": "normal", "weight_kg": 45, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 5, "type": "normal", "weight_kg": 45, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 6, "type": "normal", "weight_kg": 45, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 7, "type": "normal", "weight_kg": 45, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 8, "type": "normal", "weight_kg": 45, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 9, "type": "normal", "weight_kg": 45, "reps": 15, "distance_meters": null, "duration_seconds": null}
+      ]
+    },
+    {
+      "index": 4, "title": "Good Morning (Barbell)", "exercise_template_id": "4180C405",
+      "sets": [
+        {"index": 0, "type": "warmup", "weight_kg": 15, "reps": 10, "distance_meters": null, "duration_seconds": null},
+        {"index": 1, "type": "warmup", "weight_kg": 21, "reps": 6, "distance_meters": null, "duration_seconds": null},
+        {"index": 2, "type": "normal", "weight_kg": 32.5, "reps": 15, "distance_meters": null, "duration_seconds": null},
+        {"index": 3, "type": "normal", "weight_kg": 32.5, "reps": 9, "distance_meters": null, "duration_seconds": null},
+        {"index": 4, "type": "normal", "weight_kg": 32.5, "reps": 9, "distance_meters": null, "duration_seconds": null}
+      ]
+    }
+  ]
+}

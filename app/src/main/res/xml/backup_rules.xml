@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Auto-backup rules (used on devices < API 31). Auto-backup mirrors selected
+    SharedPreferences to Google Drive when the user is signed in. We exclude
+    auth tokens so a Drive snapshot can't be exfiltrated for credential reuse,
+    and exclude pending workout bodies so a stale recovery write doesn't
+    resurrect on a fresh install.
+-->
+<full-backup-content>
+    <exclude domain="sharedpref" path="hevy_auth.xml"/>
+    <exclude domain="sharedpref" path="hevy_auth_enc.xml"/>
+    <exclude domain="sharedpref" path="pending_request.xml"/>
+</full-backup-content>

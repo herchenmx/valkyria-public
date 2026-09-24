@@ -1,0 +1,80 @@
+{
+  "routine": {
+    "id": "1069c2a4-d127-4933-a92b-dbe393c13f19",
+    "title": "POP: Lower 2",
+    "folder_id": "2525049",
+    "updated_at": "2026-04-12T14:51:00.345Z",
+    "created_at": "2026-03-22T17:45:06.266Z",
+    "exercises": [
+      {
+        "index": 0, "title": "Squat (Machine)", "exercise_template_id": "CC35A01F",
+        "notes": null, "supersets_id": null, "rest_seconds": 90,
+        "sets": [
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null}
+        ]
+      },
+      {
+        "index": 1, "title": "Romanian Deadlift (Barbell)", "exercise_template_id": "2B4B7310",
+        "notes": null, "supersets_id": null, "rest_seconds": 90,
+        "sets": [
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null}
+        ]
+      },
+      {
+        "index": 2, "title": "Leg Press Horizontal (Machine)", "exercise_template_id": "0EB695C9",
+        "notes": null, "supersets_id": null, "rest_seconds": 90,
+        "sets": [
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null}
+        ]
+      },
+      {
+        "index": 3, "title": "Single Leg Press (Machine)", "exercise_template_id": "3FD83744",
+        "notes": null, "supersets_id": null, "rest_seconds": 90,
+        "sets": [
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null}
+        ]
+      },
+      {
+        "index": 4, "title": "Hip Thrust (Machine)", "exercise_template_id": "68CE0B9B",
+        "notes": null, "supersets_id": null, "rest_seconds": 90,
+        "sets": [
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null}
+        ]
+      },
+      {
+        "index": 5, "title": "Good Morning (Barbell)", "exercise_template_id": "4180C405",
+        "notes": null, "supersets_id": null, "rest_seconds": 90,
+        "sets": [
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null}
+        ]
+      },
+      {
+        "index": 6, "title": "Cable Twist (Up to down)", "exercise_template_id": "A2D838BD",
+        "notes": null, "supersets_id": null, "rest_seconds": 90,
+        "sets": [
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null},
+          {"type": "normal", "weight_kg": null, "reps": null, "rep_range": {"start": 10, "end": 15}, "distance_meters": null, "duration_seconds": null, "custom_metric": null}
+        ]
+      }
+    ]
+  }
+}

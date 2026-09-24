@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Auto-backup rules for the companion app. Excludes the Hevy auth prefs so
+    access/refresh tokens never end up in the user's Google Drive backup.
+-->
+<full-backup-content>
+    <exclude domain="sharedpref" path="hevy_auth.xml"/>
+    <exclude domain="sharedpref" path="hevy_auth_enc.xml"/>
+</full-backup-content>

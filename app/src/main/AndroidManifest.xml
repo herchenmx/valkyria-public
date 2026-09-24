@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- BluetoothAdapter.isEnabled() — normal permission on API ≤ 30, auto-granted.
+         Used by wear/PhoneLink to gate the first API call until the BT radio is ON
+         and a phone is reachable. -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- Phase E — suppress Wi-Fi during workouts (Bluetooth-tether to the phone
+         still provides INTERNET, so the throttled saves + recovery webhook +
+         finish POST all keep working). Normal permission, auto-granted. -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Runtime-prompted on first non-resumed workout start when the user has
+         enabled "Heart rate" in Settings. KSW1 (shiner) has no PPG so the
+         feature below stays required="false" and the permission becomes a
+         silent no-op there. -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-feature
+        android:name="android.hardware.sensor.heartrate"
+        android:required="false" />
+
+    <!-- Declare this as a Wear OS app -->
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <application
+        android:name=".HevyApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HevyWatch">
+
+        <!-- Required: marks this app as not targeting phones -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <!-- Phase G — ADB-driven Wi-Fi priority knob. Exported so `adb shell
+             am broadcast` (which runs as the shell user, not us) can deliver
+             the SET_WIFI_PRIORITY intent. Blast radius is bounded: a hostile
+             broadcast can only switch which *already-saved* network the
+             watch prefers post-workout, never join a new one. -->
+        <receiver
+            android:name=".util.WifiPriorityReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.hevywatch.SET_WIFI_PRIORITY" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ADB-driven knob for stamping the installed APK's commit hash into
+             shared prefs. The hash is unknown at build time (build precedes
+             commit), so a post-install `am broadcast` writes the freshly-
+             pushed short hash into the store; Settings renders it at the
+             bottom. Exported for the same reason as WifiPriorityReceiver. -->
+        <receiver
+            android:name=".util.CommitInfoReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.hevywatch.SET_COMMIT_HASH" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ADB-driven override for the spoofed Hevy-App-Version /
+             Hevy-App-Build headers. Lets the watch advertise a freshly-detected
+             official-Hevy version without rebuilding. The companion app pushes
+             the same values automatically via the /api_version DataClient
+             path; this broadcast is the manual override. Exported for the same
+             reason as the other ADB receivers. -->
+        <receiver
+            android:name=".util.SetApiVersionReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.hevywatch.SET_API_VERSION" />
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:taskAffinity=".MainActivity"
+            android:theme="@style/Theme.HevyWatch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Receives messages from the Hevy companion phone app via Wearable MessageAPI -->
+        <service
+            android:name=".PhoneAuthService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data
+                    android:host="*"
+                    android:pathPrefix="/"
+                    android:scheme="wear" />
+            </intent-filter>
+        </service>
+        <!-- Tile: shows routines when idle, workout info when active -->
+        <service
+            android:name=".tile.HevyTileService"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="com.google.android.wearable.permission.BIND_TILE_PROVIDER">
+            <intent-filter>
+                <action android:name="androidx.wear.tiles.action.BIND_TILE_PROVIDER" />
+            </intent-filter>
+            <meta-data
+                android:name="androidx.wear.tiles.PREVIEW"
+                android:resource="@mipmap/ic_launcher" />
+        </service>
+    </application>
+
+</manifest>

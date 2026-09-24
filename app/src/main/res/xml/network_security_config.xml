@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Defense-in-depth: pin cleartext (plain HTTP) OFF for the whole app. Every
+  endpoint the watch talks to is HTTPS (api.hevyapp.com, raw.githubusercontent.com),
+  and targetSdk 28 already defaults cleartext to permitted — which is why this
+  file exists: without it, a future dependency that issues an http:// call would
+  be silently allowed. base-config below makes any cleartext attempt fail loudly
+  instead. No <domain-config> overrides, so there is no cleartext escape hatch.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Data extraction rules (API 31+). Same exclusions as backup_rules.xml: auth
+    tokens never leave the device via cloud backup or device-transfer, and
+    pending workout bodies aren't carried forward (they're a transient retry
+    buffer scoped to one install).
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="hevy_auth.xml"/>
+        <exclude domain="sharedpref" path="hevy_auth_enc.xml"/>
+        <exclude domain="sharedpref" path="pending_request.xml"/>
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="hevy_auth.xml"/>
+        <exclude domain="sharedpref" path="hevy_auth_enc.xml"/>
+        <exclude domain="sharedpref" path="pending_request.xml"/>
+    </device-transfer>
+</data-extraction-rules>

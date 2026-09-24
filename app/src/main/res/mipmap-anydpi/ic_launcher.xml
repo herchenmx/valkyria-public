@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    <!--
+      Themed-icon (Material You) silhouette. The launcher uses ONLY the
+      alpha channel and tints with the wallpaper colour, so this drawable
+      is the valkyria mask: opaque disc with a valkyria-shaped transparent
+      cutout. Reusing the orange foreground here would produce the same
+      shape but tinted instead of orange, which is fine — but the dedicated
+      monochrome lets us iterate on themed-icon contrast independently if
+      we ever need to thicken/thin the silhouette for that mode only.
+    -->
+    <monochrome android:drawable="@drawable/ic_launcher_monochrome" />
+</adaptive-icon>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.HevyWatch" parent="android:Theme.Material.NoActionBar">
+        <!-- Black window background prevents the OS-level white flash on cold start,
+             before Compose has rendered its first frame. -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+    </style>
+</resources>

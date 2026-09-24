@@ -1,0 +1,56 @@
+{
+  "entries": [
+    {
+      "version_name": "3.0.12",
+      "version_code": "2032997",
+      "first_seen_at": "2026-05-14T00:00:00Z",
+      "note": "Initial bootstrap entry \u2014 values observed manually before automation existed."
+    },
+    {
+      "version_name": "3.1.0",
+      "version_code": "2092239",
+      "first_seen_at": "2026-06-29T13:00:02Z"
+    },
+    {
+      "version_name": "3.1.2",
+      "version_code": "2106111",
+      "first_seen_at": "2026-07-06T12:38:13Z"
+    },
+    {
+      "version_name": "3.1.3",
+      "version_code": "3176686",
+      "first_seen_at": "2026-07-20T11:38:00Z"
+    },
+    {
+      "version_name": "3.1.6",
+      "version_code": "3204520",
+      "first_seen_at": "2026-07-27T12:13:05Z"
+    },
+    {
+      "version_name": "3.1.7",
+      "version_code": "3206872",
+      "first_seen_at": "2026-08-03T12:14:39Z"
+    },
+    {
+      "version_name": "3.1.8",
+      "version_code": "3219763",
+      "first_seen_at": "2026-08-10T10:10:25Z"
+    },
+    {
+      "version_name": "3.1.9",
+      "version_code": "3235468",
+      "first_seen_at": "2026-08-17T09:32:36Z"
+    },
+    {
+      "version_name": "3.1.14",
+      "version_code": "3308731",
+      "first_seen_at": "2026-09-21T11:27:56Z",
+      "promoted_at": "2026-09-21T14:27:58Z"
+    },
+    {
+      "version_name": "3.1.15",
+      "version_code": "3310576",
+      "first_seen_at": "2026-09-21T15:31:14Z"
+    }
+  ]
+}
