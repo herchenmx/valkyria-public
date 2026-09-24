@@ -30,7 +30,7 @@ import java.util.Locale
  *
  * Barbell and dumbbell exercises get a per-side breakdown in brackets so the
  * recipient doesn't have to do the math when loading plates. Olympic bar is
- * assumed to weigh 20 kg (the standard in every gym Maria lifts at); the
+ * assumed to weigh 20 kg (the standard in every gym the user lifts at); the
  * remainder is split evenly between the two sides.
  *
  * Recipients need the filter summary to know what to tweak when asking for a

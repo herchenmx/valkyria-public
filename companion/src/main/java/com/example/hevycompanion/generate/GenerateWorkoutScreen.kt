@@ -76,7 +76,7 @@ import com.example.hevycompanion.muscle.MuscleAssetMap
  * All multi-select filters (Level / Category / Equipment) are instant-apply —
  * every tap in the picker toggles the VM state, the sheet can be dismissed
  * at any time, and there's no "Set for this workout" confirm button. No
- * selected-count is displayed on the chips either (per Maria's request to
+ * selected-count is displayed on the chips either (per the user's request to
  * keep the chip row compact).
  */
 @OptIn(ExperimentalMaterial3Api::class)

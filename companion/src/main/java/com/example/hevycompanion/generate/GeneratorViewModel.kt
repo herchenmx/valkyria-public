@@ -108,7 +108,7 @@ class GeneratorViewModel(app: Application) : AndroidViewModel(app) {
     /**
      * Plain-language reason the result list is empty when the user just hit
      * Regenerate. Surfaced in [GenerateWorkoutScreen] above the (empty) result
-     * list so beginners onboarded by Maria don't sit there confused why
+     * list so beginners onboarded by the user don't sit there confused why
      * "no exercises" came back. Null = no warning to show.
      */
     val warningMessage: String?

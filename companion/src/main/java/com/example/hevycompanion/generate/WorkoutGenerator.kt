@@ -153,7 +153,7 @@ object WorkoutGenerator {
             // Strict equipment filter: the exercise's equipment tag must be in
             // the user's selection. Bodyweight ("none") and catch-all ("other")
             // are no longer force-included — earlier versions did that to match
-            // Liftoff's observed soft-filter, but Maria reported it as surprising
+            // Liftoff's observed soft-filter, but the user reported it as surprising
             // (bird-dog / lateral-leg-raises appearing after she un-ticked
             // "Bodyweight"). User's explicit selection wins.
             //
@@ -223,7 +223,7 @@ enum class Duration(
     H130(90, "1h 30m", exerciseCount = 8, setsPerExercise = 3, repsPerSet = 8);
 
     companion object {
-        /** Default matching Maria's personal preference + Liftoff's default selection. */
+        /** Default matching the user's personal preference + Liftoff's default selection. */
         val DEFAULT: Duration = H1
     }
 }

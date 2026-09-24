@@ -97,7 +97,7 @@ class WorkoutGeneratorTest {
     }
 
     @Test fun `strict equipment filter excludes bodyweight when un-ticked`() {
-        // Regression for the reverse bug of the earlier soft filter: Maria
+        // Regression for the reverse bug of the earlier soft filter: the user
         // reported that un-ticking "Bodyweight" in the picker still surfaced
         // bird-dog / lateral-leg-raises / push-ups because the old logic
         // force-included the "none" and "other" tags. Behaviour is now strict:
@@ -493,7 +493,7 @@ class WorkoutGeneratorTest {
         assertEquals(emptyList<MuscleShare>(), w.muscleSplit)
     }
 
-    @Test fun `Duration DEFAULT is 1h (Maria's preference & Liftoff default)`() {
+    @Test fun `Duration DEFAULT is 1h (the user's preference & Liftoff default)`() {
         assertEquals(Duration.H1, Duration.DEFAULT)
         assertEquals(60, Duration.DEFAULT.minutes)
         assertEquals(5, Duration.DEFAULT.exerciseCount)

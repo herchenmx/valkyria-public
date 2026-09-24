@@ -37,7 +37,7 @@ class WorkoutSharingTest {
             selectedCategories = Category.DEFAULT,
             selectedEquipment = setOf("barbell", "dumbbell", "none"),
         )
-        // Exact, character-for-character match against the shape Maria agreed to.
+        // Exact, character-for-character match against the shape the user agreed to.
         // If the format ever needs to change, update this literal first — it IS
         // the spec.
         val expected = """

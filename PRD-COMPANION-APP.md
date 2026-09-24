@@ -252,7 +252,7 @@ Shares the same valkyria-on-orange-disc graphic as the watch app. The companion 
 
 ## Generator empty-state warning
 
-`GeneratorViewModel.warningMessage` (and its `MmGeneratorViewModel` mirror) surfaces a plain-language reason when the result list is empty because the user has untoggled every chip in some dimension — "All equipment is deselected — pick at least one to see exercises", "All levels are deselected", etc. Beginners onboarded by Maria wouldn't think to look at the filter row otherwise; the message is rendered above the (empty) result list in `GenerateWorkoutScreen` and `MmGenerateScreen`.
+`GeneratorViewModel.warningMessage` (and its `MmGeneratorViewModel` mirror) surfaces a plain-language reason when the result list is empty because the user has untoggled every chip in some dimension — "All equipment is deselected — pick at least one to see exercises", "All levels are deselected", etc. Beginners onboarded by the user wouldn't think to look at the filter row otherwise; the message is rendered above the (empty) result list in `GenerateWorkoutScreen` and `MmGenerateScreen`.
 
 ## Exercise-template catalog fetch
 
@@ -1039,7 +1039,7 @@ A truly unified VM and screen would be a heavy refactor against two well-tested 
 **Files**: `generate/WorkoutGenerator.kt`, `generate/GenerateWorkoutScreen.kt`, `generate/GeneratorViewModel.kt`, `generate/EquipmentCategory.kt`, `generate/RoutineRepo.kt`, `generate/SaveRoutineFolderScreen.kt`, `generate/SaveRoutineDetailsScreen.kt`, `muscle/MuscleSelectorScreen.kt` (multi-select mode), `data/HevyExerciseAttrMap.kt` + `assets/hevy_exercise_attrs.json`
 
 ### Purpose
-Static (non-LLM) port of Liftoff's "Generate Workout" feature. The user picks target muscle groups + filters (duration / weights-bias / level / category / equipment), and the app rolls a randomized workout from the cached Hevy template catalog. **Used by Maria for her own workouts AND for friends/beginners she onboards to strength training** — so the full filter UX matters even though Maria personally always picks 1h / Heavy / Advanced / 3×10-15 reps.
+Static (non-LLM) port of Liftoff's "Generate Workout" feature. The user picks target muscle groups + filters (duration / weights-bias / level / category / equipment), and the app rolls a randomized workout from the cached Hevy template catalog. **Used by the user for their own workouts AND for friends/beginners she onboards to strength training** — so the full filter UX matters even though the user personally always picks 1h / Heavy / Advanced / 3×10-15 reps.
 
 This deliberately does NOT port Liftoff's other two generation flows (the LLM-powered "Generate new workout" button, and the quick-start chips like "At Home" / "Gym" — both call OpenAI behind the gymbros backend with metered usage). Only the deterministic muscle-split flow is in scope.
 
@@ -1079,7 +1079,7 @@ Row styling matches `BrowserScreen`'s Hevy rows: 72 dp circle avatar, `titleMedi
 
 ### Algorithm (`WorkoutGenerator.generate`)
 1. Filter `templates` where `primary_muscle_group ∈ selectedHevyMuscles` (lowercased)
-2. **Strict equipment filter**: keep only exercises where `equipment ∈ selectedEquipment`. Exercises with a null `equipment` tag are excluded — we have no basis to decide whether the user wanted them. (Earlier versions used a soft filter that force-included the `"none"` and `"other"` tags, mirroring a behaviour observed in Liftoff. Removed after Maria reported un-ticking "Bodyweight" still surfaced bird-dog / lateral-leg-raises / push-ups. The user's explicit selection now wins without exception.)
+2. **Strict equipment filter**: keep only exercises where `equipment ∈ selectedEquipment`. Exercises with a null `equipment` tag are excluded — we have no basis to decide whether the user wanted them. (Earlier versions used a soft filter that force-included the `"none"` and `"other"` tags, mirroring a behaviour observed in Liftoff. Removed after the user reported un-ticking "Bodyweight" still surfaced bird-dog / lateral-leg-raises / push-ups. The user's explicit selection now wins without exception.)
 3. **Level filter** (multi-select): keep only exercises whose scraped `level` list intersects `selectedLevels`. Strict in the same sense as equipment — an exercise missing from the attrs side table is excluded rather than passed through, so the pool stays deterministic. Empty `selectedLevels` behaves as "all levels" (the filter short-circuits). If the bundled attrs asset failed to load entirely (empty map at the generator call site), both this and the category filter are bypassed — better to show an unfiltered workout than none at all.
 4. **Category filter** (multi-select): keep only exercises whose scraped `category` is in the user's selection. Hevy publishes three raw strings — `compound`, `isolation`, `assistance-compound` — and the UI offers two options; `Category.COMPOUND` folds `assistance-compound` into its allowlist per user spec so the two collapse into one filter button.
 5. Shuffle with the supplied `Random` (default = `Random.Default`; tests inject seeded `Random` for determinism)
