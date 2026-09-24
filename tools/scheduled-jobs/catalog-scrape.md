@@ -10,8 +10,8 @@ This task runs UNATTENDED on a schedule. The user is not present — execute aut
 Every path in this task derives from these two variables. Set them once; change nothing else if the repo moves:
 
 ```
-MAIN=/Users/maria/Projects/hevy-wear-os-sdk28
-WORKTREES=/Users/maria/Projects/hevy-worktrees
+MAIN=~/Projects/hevy-wear-os-sdk28
+WORKTREES=~/Projects/hevy-worktrees
 ```
 
 Do not place either path under ~/Downloads, ~/Documents, or ~/Desktop. macOS privacy protection blocks scheduled background jobs from those folders, and the failure looks like a permissions bug on files that are plainly readable when you run them by hand.

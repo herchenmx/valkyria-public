@@ -10,8 +10,8 @@ This task runs UNATTENDED on a schedule. The user is not present to answer quest
 Every path in this task derives from these two variables. Set them once; change nothing else if the repo moves:
 
 ```
-MAIN=/Users/maria/Projects/hevy-wear-os-sdk28
-WORKTREES=/Users/maria/Projects/hevy-worktrees
+MAIN=~/Projects/hevy-wear-os-sdk28
+WORKTREES=~/Projects/hevy-worktrees
 ```
 
 Treat everything under $MAIN as read-only. All edits, tests, and builds happen inside a throwaway worktree under $WORKTREES.
