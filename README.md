@@ -1,5 +1,15 @@
 # valkyria
 
+> **📸 One-off snapshot — not maintained.**
+> This is a public copy of a private repo, taken on 2026-09-24. It won't receive updates or fixes.
+>
+> Removed or redacted compared to the original:
+> - Git history, releases and build secrets
+> - The GitHub Actions workflows (`.github/workflows/`) and local Claude tooling (`.claude/`)
+> - Hevy's web client key in `HevyAuthApi.kt` (replaced with a placeholder, so companion login won't work as-is)
+>
+> The companion fetches `api-versions/active.json` from the private repo, so that auto-sync won't work from a fresh build.
+
 A custom Wear OS workout logger for [Hevy](https://www.hevyapp.com/), plus a
 phone companion app. It replaces the official Hevy watch app on an older
 Wear OS 2 watch (Kate Spade Scallop 2, API 28) and adds features Hevy's own
@@ -41,12 +51,6 @@ Android SDK (platform 36).
 
 Do not bump the watch's `minSdk` or `targetSdk` above 28. See the comments in
 `app/build.gradle.kts`.
-
-## About this repo
-
-This is a public snapshot of a private working repo. CI workflows, releases
-and build secrets are not included, and Hevy's web client key in
-`HevyAuthApi.kt` is replaced with a placeholder.
 
 `api-versions/` holds the Hevy API version the apps should send. The companion
 fetches `api-versions/active.json` on start.
